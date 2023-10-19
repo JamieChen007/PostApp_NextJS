@@ -44,7 +44,8 @@ export async function getServerSideProps(context: any) {
   console.log("params", context.params);
   console.log("query", context.query);
 
-  const res = await fetch("https://dummyjson.com/products");
+  // const res = await fetch("https://dummyjson.com/products");
+  const res = await fetch("https://post-app-next-js.vercel.app/api/products");
   // const res = await fetch("http://localhost:3000/api/products/");
   const productsData = await res.json();
 
