@@ -20,6 +20,7 @@ export default function Page(props: any) {
                 {product.images.map((imgUrl: string) => {
                   return (
                     <img
+                      key={imgUrl}
                       src={imgUrl}
                       alt="picture"
                       style={{ height: "100px", padding: "3px" }}
