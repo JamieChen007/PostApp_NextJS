@@ -1,5 +1,5 @@
 import NavButton from "@/components/NavButton";
-
+import Image from "next/image";
 export default function Page(props: any) {
   return (
     <div>
@@ -19,11 +19,12 @@ export default function Page(props: any) {
               <div>
                 {product.images.map((imgUrl: string) => {
                   return (
-                    <img
+                    <Image
                       key={imgUrl}
                       src={imgUrl}
                       alt="picture"
-                      style={{ height: "100px", padding: "3px" }}
+                      width={100}
+                      height={100}
                     />
                   );
                 })}
